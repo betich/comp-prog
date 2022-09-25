@@ -1,0 +1,6 @@
+1st semester 2015
+GPA = 2.65, GPAX = 2.65
+2nd semester 2015
+GPA = 2.79, GPAX = 2.71
+1st semester 2016
+GPA = 2.43, GPAX = 2.62
