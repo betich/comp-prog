@@ -1,0 +1,12 @@
+n = int(input())
+print(' ' * (n - 1), end='')
+print('*', end='')
+print(' ' * (n - 1), end='')
+print('\n', end='')
+for i in range(n-2):
+    print(' ' * (n - 2 - i), end='')
+    print('*', end='')
+    print(' ' * ((i + 1) * 2 - 1), end='')
+    print('*', end='')
+    print('\n', end='')
+print('*' * (n * 2 - 1))
