@@ -72,17 +72,25 @@ scores = [sum([int(e) for e in line.split(',')[1:]]) for line in lines[1:]]
 
 f1 = open("score.csv", "w")    # opens the file
 
-f1.write("student_id,Q1,Q2,Q3,Q4,Q5")    # write a string to the file
+f1.write("student_id,Q1,Q2,Q3,Q4,Q5" + "\n")    # write a string to the file [\n = enter a new line (เคาะบรรทัด)]
+
+f1.write("first line" + "\n")   # add \n to enter a new line
+f1.write("second line" + "\n")
+
+a = ["1", "2", "3"]
+
+for i in a:
+  f1.write(i + "\n")
 
 f1.close()    # close the file
 
 
-# Method 2: writelines()
+# Method 2: use '\n'.join()
 # writelines => write a list of strings to the file
 
 f2 = open("score.csv", "w")    # opens the file
 
-# write a list of strings to the file
-f2.writelines(["student_id,Q1,Q2,Q3,Q4,Q5", "5600148421,7,1,6,6,6"])
+a = ["1", "2", "3"]
+f2.write("\n".join(a))    # adds \n in between the list items
 
 f2.close()    # close the file
