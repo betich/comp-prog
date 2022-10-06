@@ -72,7 +72,8 @@ scores = [sum([int(e) for e in line.split(',')[1:]]) for line in lines[1:]]
 
 f1 = open("score.csv", "w")    # opens the file
 
-f1.write("student_id,Q1,Q2,Q3,Q4,Q5" + "\n")    # write a string to the file [\n = enter a new line (เคาะบรรทัด)]
+# write a string to the file [\n = enter a new line (เคาะบรรทัด)]
+f1.write("student_id,Q1,Q2,Q3,Q4,Q5" + "\n")
 
 f1.write("first line" + "\n")   # add \n to enter a new line
 f1.write("second line" + "\n")
@@ -80,7 +81,7 @@ f1.write("second line" + "\n")
 a = ["1", "2", "3"]
 
 for i in a:
-  f1.write(i + "\n")
+    f1.write(i + "\n")
 
 f1.close()    # close the file
 
@@ -94,3 +95,19 @@ a = ["1", "2", "3"]
 f2.write("\n".join(a))    # adds \n in between the list items
 
 f2.close()    # close the file
+
+
+# Example
+
+a = [["6210202002", "22"], ["6210202002", "22"], ["6210202002", "22"]]
+
+# Expected Output:
+# 6210202002 22\n
+# 6210202002 22\n
+# 6210202002 22
+
+f3 = open("result.txt", "w")
+
+b = [" ".join(i) for i in a]    # ["6210202002 22", "6210202002 22", "6210202002 22"]
+
+f3.write("\n".join(b))   #  "6210202002 22\n6210202002 22\n6210202002 22"
